@@ -19,7 +19,7 @@ body {
     background-color: #1a1a1f;
     border-radius: 16px;
     padding: 36px 40px;
-    max-width: 640px;
+    max-width: 800px;
     width: 100%;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
     border: 1px solid #2c2c34;
@@ -34,43 +34,69 @@ body {
 
 .container h4 {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     font-weight: 400;
     opacity: 0.8;
 }
 
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+/* Linha informativa em cima da tabela */
+.container p {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    opacity: 0.7;
 }
 
-.card {
-    display: block;
+.activities-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activities-table thead th {
     background-color: #23232b;
-    border-radius: 10px;
-    padding: 16px 20px;
     color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
+    padding: 12px 16px;
+    text-align: left;
     font-weight: 500;
-    transition: 
-        background-color 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    border: 1px solid #33333f;
+    border-bottom: 1px solid #33333f;
 }
 
-.card:hover {
+.activities-table tbody tr {
+    background-color: #1f1f27;
+    border-bottom: 1px solid #2c2c34;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.activities-table tbody tr:hover {
     background-color: #2d2d38;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.card:hover::before {
-    content: "→";
-    margin-right: 8px;
+.activities-table td {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #2c2c34;
 }
 
-/* opcional: se quiser mais discreto, sem seta */
-/* .card:hover::before { content: ""; } */
+.link-cell {
+    text-align: center;
+}
+
+.activities-table a {
+    display: inline-block;
+    background-color: #23232b;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid #33333f;
+    transition: all 0.2s ease;
+}
+
+.activities-table a:hover {
+    background-color: #2d2d38;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
