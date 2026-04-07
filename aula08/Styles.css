@@ -1,0 +1,28 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fafafa;
+    margin: 20px;
+}
+
+#titulo {
+    color: darkred;
+    text-align: center;
+}
+
+.destaque {
+    border: 1px solid gray;
+}
+
+table {
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: lightgray;
+    padding: 20px;
+}
+
+img {
+    margin-top: 10px;
+}
