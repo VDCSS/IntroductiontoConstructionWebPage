@@ -1,0 +1,46 @@
+body {
+    background-color: #0b0b0b;
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 0 0 10px #00ff88;
+}
+
+#menu {
+    border-bottom: 2px solid #00ff88;
+    padding-bottom: 10px;
+}
+
+.cyber {
+    background-color: #ff00ff;
+    color: #000000;
+    padding: 5px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff00ff;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 3px solid #00ff88;
+    background-color: #001100;
+    text-decoration: none;
+}
+
+a:link {
+    color: #00ff88;
+    text-decoration: none;
+}
+
+a:visited { 
+    color: #8888ff;
+    text-decoration: none;
+}
