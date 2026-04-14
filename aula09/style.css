@@ -1,46 +1,156 @@
+/* 1. SELETOR ELEMENTO: body */
 body {
-    background-color: #0b0b0b;
-    color: #00ff88;
+    background-color: #0a0a0a;
     font-family: 'Courier New', monospace;
-    margin: 20px;
+    color: #00ff88;
+    margin: 0;
+    padding: 20px;
 }
 
-h1 {
+/* 2. SELETOR ELEMENTO: header */
+header {
     text-align: center;
-    text-shadow: 0 0 10px #00ff88;
-}
-
-#menu {
+    background-color: #001100;
+    color: #00ff88;
+    padding: 16px 0;
     border-bottom: 2px solid #00ff88;
-    padding-bottom: 10px;
 }
 
+/* 3. SELETOR ID */
+#titulo {
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px #00ff88;
+    margin: 0;
+}
+
+/* 4. SELETOR CLASSE */
 .cyber {
     background-color: #ff00ff;
-    color: #000000;
-    padding: 5px;
+    color: #000;
+    padding: 4px 8px;
     font-weight: bold;
+    border-radius: 4px;
 }
 
+/* 5. PSEUDOCLASSE :hover (links) */
 a:hover {
-    color: #ff00ff;
+    color: #ff00ff !important;
     text-decoration: none;
     font-size: 1.1em;
-    text-decoration: none;
+    text-shadow: 0 0 5px #ff00ff;
 }
 
+/* 6. PSEUDOCLASSE :focus (links) */
 a:focus {
     outline: 3px solid #00ff88;
     background-color: #001100;
-    text-decoration: none;
+    border-radius: 4px;
 }
 
+/* 7. PSEUDOCLASSE :link (links não visitados) */
 a:link {
     color: #00ff88;
-    text-decoration: none;
 }
 
-a:visited { 
+/* 8. PSEUDOCLASSE :visited (links visitados) */
+a:visited {
     color: #8888ff;
+}
+
+/* 9. PSEUDOCLASSE :first-child (primeira linha de listas) */
+li:first-child {
+    color: #ff00ff;
+    font-weight: bold;
+}
+
+/* 10. PSEUDOCLASSE :last-child (última linha de listas) */
+li:last-child {
+    text-decoration: underline;
+    color: #00ff88;
+}
+
+/* Main e seções */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+section {
+    margin-bottom: 24px;
+}
+
+h2 {
+    color: #00ff88;
+    margin-bottom: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #00ff88;
+    margin-bottom: 12px;
+}
+
+.nat-table {
+    border-color: #ff00ff;
+}
+
+th {
+    background-color: #001100;
+    padding: 8px;
+    border: 1px solid #00ff88;
+    text-align: left;
+}
+
+.nat-table th {
+    border-color: #ff00ff;
+    background-color: #110011;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #00ff88;
+    background-color: #111;
+}
+
+.nat-table td {
+    border-color: #ff00ff;
+}
+
+img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #00ff88;
+}
+
+.nat-table img {
+    border-color: #ff00ff;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin-top: 12px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+footer {
+    text-align: center;
+    background-color: #001100;
+    color: #8888ff;
+    padding: 12px 0;
+    margin-top: 24px;
+    border-top: 1px solid #00ff88;
+    font-size: 0.9rem;
+}
+
+.nav-link {
+    font-weight: bold;
+    font-size: 1.1rem;
     text-decoration: none;
 }
