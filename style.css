@@ -18,50 +18,71 @@ body {
 .container {
     background-color: #1a1a1f;
     border-radius: 16px;
-    padding: 41px 45px;
+    padding: 32px 40px;
     max-width: 1000px;
     width: 100%;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
     border: 1px solid #2c2c34;
+
+    /* Organizar conteúdo como coluna flex */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .container h1 {
-    font-size: 2rem;
-    margin-bottom: 5px;
+    font-size: 1.6rem;
     text-align: center;
     color: #ffffff;
 }
 
 .container h4 {
     text-align: center;
-    margin-bottom: 16px;
+    margin: 0;
     font-weight: 400;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
-/* Linha informativa em cima da tabela */
 .container p {
     text-align: center;
-    margin-bottom: 24px;
+    margin: 0;
     font-size: 0.9rem;
     opacity: 0.7;
 }
 
+/* Tabela em modo flex */
 .activities-table {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.activities-table thead {
+    flex-shrink: 0;
+}
+
+.activities-table thead tr {
+    display: flex;
     width: 100%;
-    border-collapse: collapse;
 }
 
 .activities-table thead th {
+    flex: 1;
     background-color: #23232b;
     color: #ffffff;
     padding: 12px 16px;
-    text-align: left;
     font-weight: 500;
     border-bottom: 1px solid #33333f;
 }
 
+.activities-table tbody {
+    flex: 1;
+}
+
 .activities-table tbody tr {
+    display: flex;
+    width: 100%;
     background-color: #1f1f27;
     border-bottom: 1px solid #2c2c34;
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -74,13 +95,16 @@ body {
 }
 
 .activities-table td {
+    flex: 1;
     padding: 12px 16px;
     font-size: 0.95rem;
     border-bottom: 1px solid #2c2c34;
 }
 
+/* Centralizar o botão (link) */
 .link-cell {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .activities-table a {
