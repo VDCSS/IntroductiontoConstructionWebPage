@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games & Cultura Geek - Universo CyberTech</title>
+    <meta name="description" content="Reviews de jogos online, realidade virtual, campeonatos de e-sports e novidades sobre cultura geek.">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <!-- Cabeçalho principal da página -->
+    <div id="header">
+        <h1>Games & Cultura Geek</h1>
+        <p>“O universo gamer em um só lugar.”</p>
+        <!-- Menu de navegação principal -->
+        <nav>
+            <ul>
+                <li><a href="index.html" id="inicio">Início</a></li>
+                <li><a href="tecnologia.html" id="tec">Tecnologia</a></li>
+                <li><a href="games.html" id="games">Games</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Container principal (duas colunas via CSS Grid) -->
+    <div id="main">
+        <!-- Coluna da esquerda (Conteúdo Principal) -->
+        <div id="conteudo-principal">
+            <h2>Reviews & Novidades Gamer</h2>
+
+            <!-- Área de Reviews -->
+            <div id="reviews">
+                <!-- Review 1 -->
+                <section class="notice">
+                    <h3>“A evolução dos jogos online”</h3>
+                    <h4>Análise de Conectividade</h4>
+                    <p>Os jogos multiplayer conectam <mark>milhões de jogadores</mark> ao redor do mundo em tempo real.</p>
+                    <p>Plataformas modernas, servidores globais de baixa latência e sistemas de chat de voz integrados transformaram o ato de jogar em uma experiência <em>altamente social</em> sem fronteiras físicas.</p>
+                    <aside class="inside-article">
+                        <p>Estatística: O mercado de jogos online registrou picos de conexão simultânea sem precedentes nesta década.</p>
+                    </aside>
+                </section>
+
+                <!-- Review 2 -->
+                <section class="notice">
+                    <h3>“Realidade Virtual nos games”</h3>
+                    <h4>Análise de Imersão</h4>
+                    <p>A imersão dos jogos VR proporciona experiências cada vez mais realistas e interativas.</p>
+                    <p>Dispositivos de rastreamento ocular e de movimentos de alta precisão permitem que o jogador se sinta verdadeiramente dentro do cenário de jogo.</p>
+                    
+                    <video controls style="max-width: 100%; height: auto;">
+                        <source src="img/demo_vr.mp4" type="video/mp4">
+                        Seu navegador não suporta visualização de vídeos.
+                    </video>
+
+                    <aside class="inside-article">
+                        <p>Tendência: A chegada de novos óculos VR mais leves e acessíveis promete expandir este nicho nos próximos anos.</p>
+                    </aside>
+                </section>
+            </div>
+
+            <!-- Review 3: E-sports -->
+            <section class="notice" id="esports">
+                <h3>“E-sports em crescimento”</h3>
+                <h4>Análise Competitiva</h4>
+                <p>Competições profissionais de games movimentam bilhões e atraem milhões de espectadores.</p>
+                <p>Grandes arenas lotadas, transmissões globais por streaming e patrocínios de marcas de peso consolidaram os e-sports como um fenômeno esportivo legítimo e de alta relevância econômica.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Torneio Mundial</th>
+                            <th>Jogo Principal</th>
+                            <th>Premiação Estimada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The International</td>
+                            <td>Dota 2</td>
+                            <td>U$ 18 Milhões</td>
+                        </tr>
+                        <tr>
+                            <td>Worlds</td>
+                            <td>League of Legends</td>
+                            <td>U$ 2.2 Milhões</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Área Geek -->
+            <section class="notice" id="geek">
+                <h3>Área Geek</h3>
+                <p>Filmes, séries, animes e quadrinhos fazem parte da cultura geek moderna, influenciando moda, eventos e entretenimento.</p>
+                <p>Hoje, convenções de cultura pop e lançamentos de streaming baseados em jogos dominam as conversas e geram discussões profundas em comunidades digitais ao redor do planeta.</p>
+            </section>
+
+            <!-- Seção de Exercício: Formas de Posicionamento de Div -->
+            <div id="layout-demo">
+                <h3>Formas de Posicionamento</h3>
+                
+                <h4>Posicionamento de Divs</h4>
+                <div class="demo-posicionamento-container">
+                    <div class="demo-box box-static">Posicionamento static</div>
+                    <div class="demo-box box-relative">Posicionamento relative</div>
+                    <div class="demo-box box-absolute">Posicionamento absolute</div>
+                    <div class="demo-box box-sticky">Posicionamento sticky</div>
+                    <div class="demo-box box-fixed">Posicionamento fixed</div>
+                </div>
+
+                <h4>Floats & Alinhamento</h4>
+                <div class="demo-float-container">
+                    <div class="demo-box box-float-left">Posicionamento float left - esquerda</div>
+                    <div class="demo-box box-float-right">Posicionamento float right - direita</div>
+                    <p class="box-central-label">Posicionamento central</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra lateral contendo o Ranking Gamer -->
+        <aside id="barra-lateral">
+            <h2>Jogos Mais Populares</h2>
+            <ol id="ranking">
+                <li>Valorant</li>
+                <li>Minecraft</li>
+                <li>Fortnite</li>
+                <li>League of Legends</li>
+                <li>Counter-Strike</li>
+            </ol>
+        </aside>
+    </div>
+
+    <!-- Rodapé -->
+    <div id="footer">
+        <p><small>© 2026 Universo CyberTech — Todos os direitos reservados.</small></p>
+        <div class="textmin-divider"></div>
+        <p><small>Fale conosco: <strong>contato@universocybertech.com</strong></small></p>
+    </div>
+
+</body>
+</html>

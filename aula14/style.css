@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f9;
+    font-family: 'Inter', sans-serif;
+    color: #334155;
+    line-height: 1.6;
+}
+
+#header {
+    background-color: #ffffff;
+    color: #052231;
+    min-height: 140px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: solid 3px #00bcd4;
+    box-sizing: border-box;
+}
+
+#header h1 {
+    margin: 0 0 5px 0;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #052231;
+}
+
+#header p {
+    margin: 0 15px;
+    font-size: 16px;
+    font-style: italic;
+    color: #64748b;
+    font-weight: 400;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #e2e8f0;
+    border-bottom: solid 2px #cbd5e1;
+    border-top: solid 2px #cbd5e1;
+    padding: 8px 0;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 15px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+nav li a {
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #052231;
+    padding: 6px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+}
+
+/* Efeitos de Hover Dinâmicos (IDs específicos conforme o Menu) */
+#inicio:hover {
+    background-color: #ffffff;
+    color: #00bcd4;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#tec:hover {
+    background-color: rgba(0, 188, 212, 0.1);
+    color: #00838f;
+}
+
+#games:hover {
+    background-color: rgba(0, 188, 212, 0.15);
+    color: #00838f;
+}
+
+/* Container de Duas Colunas (#main) */
+#main {
+    max-width: 1400px;
+    margin: 30px auto 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+/* Banner Principal dentro de #main */
+#banner-principal {
+    grid-column: span 2;
+    padding: 30px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    color: #052231;
+    border-radius: 12px;
+    border-left: 5px solid #00bcd4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+#banner-principal h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #00838f;
+    border-bottom: 1px solid rgba(5, 34, 49, 0.1);
+    padding-bottom: 10px;
+}
+
+#banner-principal p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #334155;
+}
+
+/* Coluna de Conteúdo Principal */
+#conteudo-principal {
+    grid-column: 1;
+}
+
+#conteudo-principal h2 {
+    color: #052231;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #00bcd4;
+}
+
+/* Cards de Conteúdo (Notícias / Artigos / Reviews) */
+.notice {
+    background-color: #ffffff;
+    color: #334155;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover simplificado e estável para as notícias */
+.notice:hover {
+    border-color: #00bcd4;
+    box-shadow: 0 8px 16px -3px rgba(0, 0, 0, 0.08);
+}
+
+.notice h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #052231;
+    border-bottom: solid 2px #f1f5f9;
+    padding-bottom: 8px;
+}
+
+.notice h4 {
+    margin: 15px 0 5px 0;
+    font-size: 16px;
+    color: #00838f;
+}
+
+.notice p {
+    font-size: 14.5px;
+    color: #475569;
+    margin: 10px 0;
+}
+
+/* Citações e Destaques Internos (.inside-article) */
+.inside-article {
+    display: block;
+    background-color: #f8fafc;
+    border-left: 4px solid #00bcd4;
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 15px 0;
+    font-style: italic;
+    font-size: 14px;
+    color: #475569;
+}
+
+.inside-article p {
+    margin: 0;
+    color: #475569;
+}
+
+/* Listas dentro dos posts */
+.notice ul {
+    list-style: disc;
+    padding-left: 22px;
+    margin: 12px 0;
+}
+
+.notice li {
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 14.5px;
+}
+
+/* Tabelas */
+.notice table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #334155;
+}
+
+.notice table th,
+.notice table td {
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+}
+
+.notice table th {
+    background-color: #f1f5f9;
+    font-weight: bold;
+    color: #052231;
+}
+
+.notice table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Barra Lateral (Aside) */
+#barra-lateral {
+    grid-column: 2;
+    background-color: #ffffff;
+    color: #052231;
+    padding: 24px;
+    border-radius: 12px;
+    border: solid 3px #00bcd4;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    box-sizing: border-box;
+}
+
+#barra-lateral h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0;
+    color: #052231;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+#barra-lateral ul, #barra-lateral ol {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#barra-lateral ul li, #barra-lateral ol li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 12px;
+    background-color: #f1f5f9;
+    border-radius: 6px;
+    border-left: 4px solid #00bcd4;
+    color: #052231;
+    transition: transform 0.2s ease;
+}
+
+#barra-lateral ul li:hover, #barra-lateral ol li:hover {
+    transform: translateX(4px);
+}
+
+#barra-lateral p {
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #f1f5f9;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px 0;
+    color: #052231;
+}
+
+/* Rodapé */
+#footer {
+    background-color: #ffffff;
+    color: #64748b;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 13.5px;
+    border-top: solid 3px #00bcd4;
+    padding: 20px 30px;
+    gap: 25px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#footer p {
+    margin: 0;
+}
+
+#footer strong {
+    color: #00838f;
+}
+
+.textmin-divider {
+    width: 2px;
+    height: 15px;
+    background-color: #cbd5e1;
+}
+
+/* Responsividade Básica */
+@media (max-width: 900px) {
+    #main {
+        grid-template-columns: 1fr;
+    }
+    #banner-principal {
+        grid-column: 1;
+    }
+    #conteudo-principal {
+        grid-column: 1;
+    }
+    #barra-lateral {
+        grid-column: 1;
+        position: static;
+        width: 100%;
+    }
+    #footer {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 20px;
+    }
+    .textmin-divider {
+        display: none;
+    }
+}
+
+/* ==========================================
+   ESTILIZAÇÃO DE TAGS ADICIONAIS
+   ========================================== */
+
+fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+legend {
+    font-weight: 700;
+    color: #00838f;
+    padding: 0 8px;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #052231;
+}
+
+input[type="email"], input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+input[type="email"]:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
+}
+
+button[type="submit"] {
+    background-color: #052231;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+    font-size: 13px;
+}
+
+button[type="submit"]:hover {
+    background-color: #00bcd4;
+}
+
+pre {
+    background-color: #052231;
+    color: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(5, 34, 49, 0.05);
+    color: #00838f;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 90%;
+}
+
+pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+}
+
+dl {
+    margin: 15px 0;
+}
+
+dt {
+    font-weight: 700;
+    color: #00838f;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 13.5px;
+    color: #475569;
+}
+
+blockquote {
+    background-color: #f8fafc;
+    border-left: 5px solid #00bcd4;
+    margin: 15px 0;
+    padding: 12px 20px;
+    font-style: italic;
+    color: #475569;
+    border-radius: 0 8px 8px 0;
+}
+
+blockquote cite {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 5px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+figure {
+    margin: 15px 0;
+    text-align: center;
+    background-color: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+}
+
+figure figcaption {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+audio, video {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+/* ==========================================
+   LABORATÓRIO DE POSICIONAMENTO (EXERCÍCIO)
+   ========================================== */
+
+#layout-demo {
+    margin-top: 30px;
+    border: 2px dashed #00bcd4;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+#layout-demo h3 {
+    margin-top: 0;
+    color: #052231;
+    font-size: 22px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+#layout-demo h4 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #052231;
+    font-size: 18px;
+}
+
+.demo-posicionamento-container {
+    position: relative; /* Base para o absolute */
+    height: 380px;
+    border: 1px solid #cbd5e1;
+    background-color: #f8fafc;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+.demo-box {
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.box-static {
+    position: static;
+    background-color: #006400; /* Green */
+    margin-top: 210px;
+}
+
+.box-relative {
+    position: relative;
+    background-color: #deb887; /* Tan */
+    top: 50px;
+    left: 170px;
+    color: #052231;
+}
+
+.box-absolute {
+    position: absolute;
+    background-color: #008080; /* Teal */
+    top: 35px;
+    left: 15px;
+}
+
+.box-sticky {
+    position: sticky;
+    background-color: #808080; /* Grey */
+    top: 10px;
+    left: 220px;
+    display: inline-block;
+}
+
+.box-fixed {
+    position: fixed;
+    background-color: #d2691e; /* Orange/Rust */
+    top: 150px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Floats Container */
+.demo-float-container {
+    background-color: #556b2f; /* Olive/Dark Green */
+    color: #ffffff;
+    padding: 0;
+    min-height: 160px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Limpa floats */
+}
+
+.box-float-left {
+    float: left;
+    background-color: #8a2be2; /* Purple */
+    margin: 0;
+}
+
+.box-float-right {
+    float: right;
+    background-color: #00008b; /* Dark Blue */
+    margin: 0;
+}
+
+.box-central-label {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100px;
+    color: #ffffff;
+    margin: 0;
+}
+

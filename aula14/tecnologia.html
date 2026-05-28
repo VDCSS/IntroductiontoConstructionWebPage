@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia & Inteligência Artificial - Universo CyberTech</title>
+    <meta name="description" content="Explore os avanços da inteligência artificial, robótica industrial, computação quântica e segurança digital.">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <!-- Cabeçalho principal da página -->
+    <div id="header">
+        <h1>Tecnologia & Inteligência Artificial</h1>
+        <p>“Máquinas inteligentes moldando o amanhã.”</p>
+        <!-- Menu de navegação principal -->
+        <nav>
+            <ul>
+                <li><a href="index.html" id="inicio">Início</a></li>
+                <li><a href="tecnologia.html" id="tec">Tecnologia</a></li>
+                <li><a href="games.html" id="games">Games</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Container principal (duas colunas via CSS Grid) -->
+    <div id="main">
+        <!-- Coluna da esquerda (Conteúdo Principal) -->
+        <div id="conteudo-principal">
+            <h2>Artigos Científicos e Inovações</h2>
+
+            <!-- Artigo 1: Inteligência Artificial -->
+            <section class="notice" id="ia">
+                <h3>“O avanço da Inteligência Artificial”</h3>
+                <h4>Visão Geral</h4>
+                <p>A IA está presente em aplicativos, redes sociais, diagnósticos médicos e até na produção de conteúdo digital.</p>
+                <p>Com o aprendizado de máquina e redes neurais profundas, sistemas hoje conseguem processar linguagem natural, reconhecer padrões complexos e tomar decisões autônomas com precisão sobre-humana em tarefas específicas.</p>
+                
+                <pre><code># Código demonstrativo - Rede Neural em Python
+import tensorflow as tf
+
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
+print("Modelo de IA inicializado!")</code></pre>
+
+                <aside class="inside-article">
+                    <p>Dica: O uso ético e regulamentado da inteligência artificial é um dos principais temas debatidos por governos e cientistas no mundo todo.</p>
+                </aside>
+            </section>
+
+            <!-- Artigo 2: Robótica -->
+            <section class="notice" id="robotica">
+                <h3>“Robôs na indústria”</h3>
+                <h4>Visão Geral</h4>
+                <p>Empresas utilizam robôs para automatizar tarefas repetitivas, aumentando eficiência e produtividade.</p>
+                <p>A automação industrial moderna combina braços mecânicos precisos com sensores de visão computacional, permitindo que as máquinas se adaptem a variações na linha de produção em tempo real.</p>
+                <aside class="inside-article">
+                    <p>Curiosidade: A introdução de robôs colaborativos (cobots) permitiu que humanos e máquinas trabalhassem lado a lado com segurança nas fábricas.</p>
+                </aside>
+            </section>
+
+            <!-- Artigo 3: Computação Quântica -->
+            <section class="notice" id="quantica">
+                <h3>“Computação Quântica”</h3>
+                <h4>Visão Geral</h4>
+                <p>Pesquisadores desenvolvem computadores capazes de resolver cálculos extremamente complexos em poucos segundos.</p>
+                <p>Diferente dos computadores clássicos que operam com bits (0 e 1), os sistemas quânticos usam qubits que aproveitam a superposição e o entrelaçamento para processar volumes de 2<sup>80</sup> estados clássicos simultaneamente, facilitando simulações de moléculas como a de H<sub>2</sub>O.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Computação Clássica</th>
+                            <th>Computação Quântica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Unidade básica</td>
+                            <td>Bit (0 ou 1)</td>
+                            <td>Qubit (0, 1 ou superposição)</td>
+                        </tr>
+                        <tr>
+                            <td>Princípio físico</td>
+                            <td>Eletricidade e transistores</td>
+                            <td>Superposição e Emaranhamento</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <aside class="inside-article">
+                    <p>Impacto: O amadurecimento desta tecnologia deve revolucionar a criptografia, o design de novos materiais e a biotecnologia.</p>
+                </aside>
+            </section>
+
+            <!-- Seção Adicional: Segurança Digital para o menu -->
+            <section class="notice" id="seguranca">
+                <h3>“Segurança Digital e Ciberproteção”</h3>
+                <h4>Visão Geral</h4>
+                <p>À medida que a tecnologia evolui, as defesas digitais tornam-se essenciais. A segurança cibernética agora utiliza IA para prever vulnerabilidades e barrar intrusões em tempo real.</p>
+                <p>A implementação de criptografia de ponta a ponta e arquiteturas Zero Trust são passos fundamentais para empresas e cidadãos que desejam manter a integridade de seus dados sigilosos.</p>
+            </section>
+
+            <!-- Seção de Exercício: Formas de Posicionamento de Div -->
+            <div id="layout-demo">
+                <h3>Formas de Posicionamento</h3>
+                
+                <h4>Posicionamento de Divs</h4>
+                <div class="demo-posicionamento-container">
+                    <div class="demo-box box-static">Posicionamento static</div>
+                    <div class="demo-box box-relative">Posicionamento relative</div>
+                    <div class="demo-box box-absolute">Posicionamento absolute</div>
+                    <div class="demo-box box-sticky">Posicionamento sticky</div>
+                    <div class="demo-box box-fixed">Posicionamento fixed</div>
+                </div>
+
+                <h4>Floats & Alinhamento</h4>
+                <div class="demo-float-container">
+                    <div class="demo-box box-float-left">Posicionamento float left - esquerda</div>
+                    <div class="demo-box box-float-right">Posicionamento float right - direita</div>
+                    <p class="box-central-label">Posicionamento central</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra lateral contendo a seção especial -->
+        <aside id="barra-lateral">
+            <h2>5 Tecnologias Promissoras</h2>
+            <ol>
+                <li>Inteligência Artificial</li>
+                <li>Computação Quântica</li>
+                <li>Internet das Coisas</li>
+                <li>Realidade Virtual</li>
+                <li>Redes 6G</li>
+            </ol>
+
+            <h2>Mini Glossário</h2>
+            <dl>
+                <dt>Algoritmo</dt>
+                <dd>Sequência de instruções lógicas para resolver um problema.</dd>
+                <dt>Criptografia</dt>
+                <dd>Cifragem de dados para proteção de informações.</dd>
+            </dl>
+        </aside>
+    </div>
+
+    <!-- Rodapé -->
+    <div id="footer">
+        <blockquote>
+            “Tecnologia é transformar conhecimento em inovação.”
+            <cite>— Autor Anônimo</cite>
+        </blockquote>
+    </div>
+
+</body>
+</html>

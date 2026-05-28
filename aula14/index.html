@@ -3,50 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universe CyberTech</title>
-    <a href="st"></a>
+    <title>Universo CyberTech - Explorando o Futuro da Tecnologia</title>
+    <meta name="description" content="Acompanhe as últimas notícias sobre tecnologia, inovação, inteligência artificial, games e segurança digital no Universo CyberTech.">
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
+
+    <!-- Cabeçalho principal da página -->
     <div id="header">
-        <h1>Welcome to Universe CyberTech</h1>
+        <h1>Universo CyberTech</h1>
+        <p>“Explorando o futuro da tecnologia e da cultura digital.”</p>
+        <!-- Menu de navegação principal -->
         <nav>
             <ul>
-                <li><a href="#about">Inicio</a></li>
-                <li><a href="#services">Tecnologia</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" id="inicio">Início</a></li>
+                <li><a href="tecnologia.html" id="tec">Tecnologia</a></li>
+                <li><a href="games.html" id="games">Games</a></li>
             </ul>
         </nav>
     </div>
 
+    <!-- Container principal (duas colunas via CSS Grid) -->
     <div id="main">
-        <div id ="banner-principal">
-            <h2>"As tecnologias que vão transformar o mundo em 2030”</h2>
+        <!-- Banner Principal -->
+        <div id="banner-principal">
+            <h2>“As tecnologias que vão transformar o mundo em 2030”</h2>
             <p>A evolução tecnológica está acelerando rapidamente. Inteligência artificial, computação quântica e automação já fazem parte da realidade moderna.</p>
         </div>
 
-        <h2>Notícias em Destaque</h2>
-        <!--Notícia 1 -->
-        <section class="notice">
-            <h3>“Inteligência Artificial no cotidiano”</h3>
+        <!-- Coluna da esquerda (Conteúdo Principal) -->
+        <div id="conteudo-principal">
+            <h2>Notícias em Destaque</h2>
 
-            <p>Assistentes virtuais, carros autônomos e sistemas inteligentes estão mudando a forma como as pessoas vivem e trabalham.</p>
-        </section>
+            <!-- Notícia 1 -->
+            <section class="notice">
+                <h3>“Inteligência Artificial no cotidiano”</h3>
+                <p>Assistentes virtuais, carros autônomos e <mark>sistemas inteligentes</mark> estão mudando de forma <em>acelerada</em> a forma como as pessoas vivem e trabalham.</p>
+                <figure>
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block; margin: 0 auto;"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>
+                    <figcaption>Figura 1: Representação de Processamento Inteligente em Hardware (NPU/CPU)</figcaption>
+                </figure>
+                <aside class="inside-article">
+                    <p>A inteligência artificial tornou-se um pilar de automação e eficiência no dia a dia moderno.</p>
+                </aside>
+            </section>
 
-        <!--Notícia 2 -->
-        <section class="notice">
-            <h3>“O crescimento da cibersegurança”</h3>
-            
-            <p>Com o aumento dos ataques digitais, empresas investem cada vez mais em proteção de dados e segurança online.</p>
-        </section>
+            <!-- Notícia 2 -->
+            <section class="notice">
+                <h3>“O crescimento da cibersegurança”</h3>
+                <p>Com o aumento dos ataques digitais, empresas investem cada vez mais em proteção de dados e segurança online.</p>
+                <blockquote>
+                    “A cibersegurança é uma necessidade urgente para empresas na era da computação pós-moderna.”
+                    <cite>— Prof. Davi Brito, especialista em segurança digital</cite>
+                </blockquote>
+                <aside class="inside-article">
+                    <p>Proteger dados corporativos e pessoais é hoje um dos maiores desafios do ecossistema digital.</p>
+                </aside>
+            </section>
 
-        <!--Notícia 3 -->
-        <section class="notice">
-            <h3>“Computação em nuvem”</h3>
-            
-            <p>A nuvem revolucionou o armazenamento de informações e permitiu maior flexibilidade para empresas e usuários.</p>
-        </section>
+            <!-- Notícia 3 -->
+            <section class="notice">
+                <h3>“Computação em nuvem”</h3>
+                <p>A nuvem revolucionou o armazenamento de informações e permitiu maior flexibilidade para empresas e usuários.</p>
+                <aside class="inside-article">
+                    <p>O acesso remoto e a escalabilidade dos servidores em nuvem são fundamentais para o trabalho híbrido.</p>
+                </aside>
+            </section>
 
+            <!-- Seção de Exercício: Formas de Posicionamento de Div -->
+            <div id="layout-demo">
+                <h3>Formas de Posicionamento</h3>
+                
+                <h4>Posicionamento de Divs</h4>
+                <div class="demo-posicionamento-container">
+                    <div class="demo-box box-static">Posicionamento static</div>
+                    <div class="demo-box box-relative">Posicionamento relative</div>
+                    <div class="demo-box box-absolute">Posicionamento absolute</div>
+                    <div class="demo-box box-sticky">Posicionamento sticky</div>
+                    <div class="demo-box box-fixed">Posicionamento fixed</div>
+                </div>
+
+                <h4>Floats & Alinhamento</h4>
+                <div class="demo-float-container">
+                    <div class="demo-box box-float-left">Posicionamento float left - esquerda</div>
+                    <div class="demo-box box-float-right">Posicionamento float right - direita</div>
+                    <p class="box-central-label">Posicionamento central</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra lateral -->
         <aside id="barra-lateral">
             <h2>Curiosidades Tecnológicas</h2>
             <ul>
@@ -54,13 +100,32 @@
                 <li>A internet surgiu durante a Guerra Fria.</li>
                 <li>Mais de 5 bilhões de pessoas usam internet atualmente.</li>
             </ul>
+
+            <h2>Podcast CyberTech</h2>
+            <p>Ouça o último episódio do nosso podcast:</p>
+            <audio controls>
+                <source src="img/demo_podcast.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+
+            <h2>Receber Novidades</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Newsletter Tech</legend>
+                    <label for="newsletter-email">Digite seu e-mail:</label>
+                    <input type="email" id="newsletter-email" name="email" placeholder="exemplo@cybertech.com" required>
+                    <button type="submit">Inscrever-se</button>
+                </fieldset>
+            </form>
         </aside>
-
     </div>
 
+    <!-- Rodapé -->
     <div id="footer">
-        <p>&copy; 2024 Universe CyberTech. All rights reserved.</p>
+        <p><small>© 2026 Universo CyberTech — Todos os direitos reservados.</small></p>
+        <div class="textmin-divider"></div>
+        <p><small>Fale conosco: <strong>contato@universocybertech.com</strong></small></p>
     </div>
-    
+
 </body>
 </html>
