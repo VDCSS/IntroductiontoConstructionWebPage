@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução e exemplos: tags áudio e vídeo</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Multimídia Web</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Introdução</a></li>
+                <li><a href="funcionamento.html">Atributos e Funcionamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Multimídia na WEB: Áudio e Vídeo</h1>
+
+    <h3>O que são tags <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code>?</h3>
+    
+    <p>As tags <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code> foram introduzidas
+    no HTML5 para permitir que navegadores reproduzam arquivos de áudio e vídeos <b>sem a necessidade de 
+    plugins externos</b>(como Flash, QuickTime ou Silverligth).</p>
+
+    <p>Antes do HTML5, para colocar um vídeo ou música  em um site, era preciso usar tecnologias como Flash Player
+        ou JavaScript complexos. Hoje, com apenas algumas linhas de código, você pode embutir mídia diretamente na página</p>
+
+    <h3>Por que usar essas tags ? </h3>
+
+    <table>
+        
+        <tr>
+            <th>Vantagem</th>
+            <th>Explicação</th>
+        </tr>
+        <tr>
+            <td>Nativo</td>
+            <td>Funciona diretamente no navegador, sem plugins</td>
+        </tr>
+        <tr>
+            <td>Leve</td>
+            <td>Código simples e de fácil manuntenção</td>
+        </tr>
+        <tr>
+            <td>Personalizável</td>
+            <td>Dá para controlar aparência e comportamente via CSS e JavaScript</td>
+        </tr>
+        <tr>
+            <td>Acessível</td>
+            <td>Suportaa legendas, descrições e navegação por teclado</td>
+        </tr>
+        <tr>
+            <td>Responsivo</td>
+            <td>Se adapta a diferentes tamanhos de tela</td>
+        </tr>
+    </table>
+
+    <h2>Exemplo 1: Tag <code>&lt;audio&gt;</code></h2>
+    <p>A tag <code>&lt;audio&gt;</code> permite reproduzir arquivos de som como MP3, WAV, OGG e outros.</p>
+
+    <h4>Código básico: </h4>
+
+    <pre>
+        <code>&lt;audio controls&gt;</code>
+            <code>&lt;source src="audio.mp3" type="audio/mpeg"&gt;</code>
+            <code>&lt;source src="musica.ogg" type="audio/ogg"&gt;</code>
+            <code>&lt;source src="audio.wav" type="audio/wav"&gt;</code>
+
+            Seu navegador não suprota a tag de áudio.
+
+        <code>&lt;/audio&gt;</code>
+    </pre>
+
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"> Seu navegador não suporta a tag de áudio.
+    </audio>
+
+    <h2>Exemplo 2: Tag <code>&lt;video&gt;</code></h2>
+    <p>A tag <code>&lt;video&gt;</code> permite reproduzir arquivos de vídeo como MP4, WebM e OGV.</p>
+
+    <h4>Código básico: </h4>
+
+    <pre>
+        <code>&lt;video width="640" height="360" controls&gt;</code>
+            <code>&lt;source src="video.mp4" type="video/mp4"&gt;</code>
+            <code>&lt;source src="video.webm" type="video/webm"&gt;</code>
+            <code>&lt;source src="video.ogv" type="video/ogg"&gt;</code>
+
+            Seu navegador não suporta a tag de vídeo.
+
+        <code>&lt;/video&gt;</code>
+    </pre>
+
+    <video width="640" height="360" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <h2>Exemplo 3: Vídeo incorporado do YouTube (iframe)</h2>
+    <p>A tag <code>&lt;video&gt;</code>, você pode incorporar vídeos do YouTube usando a tag <code>&lt;iframe&gt;</code></p>
+
+    <h4>Código: </h4>   
+    
+    <pre>
+        <code>&lt;iframe width="560" height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer;
+            autoplay; clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture"
+            allowfullscreen&gt;
+        &lt;/iframe&gt;</code>
+    </pre>
+
+    <iframe width="640" height="360" 
+    src="https://www.youtube.com/embed/GWULnkTnapM"
+    title="O iframe ainda pode ser usado? - @Curso em Vídeo HTML5 e CSS3"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+    </iframe>
+
+    <h3>Quando usar <code>&lt;video&gt;</code> e <code>&lt;iframe&gt;</code> ?</h3>
+    <table>
+        <thead>
+            <th>Situação</th>
+            <th>Recomendação</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Você tem o arquivo de vídeo no  seu servidor</td> 
+                <td>Use <code>&lt;video&gt;</code> com <code>&lt;source&gt;</code></td>
+            </tr>
+            <tr>
+                <td>O vídeo está no YouTube ou outra plataforma</td>
+                <td>Use <code>&lt;iframe&gt;</code> (embutir)</td>
+            </tr>
+            <tr>
+                <td>Quer total controle sobre aparência e comportamento do player</td>
+                <td>Use <code>&lt;video&gt;</code> com CSS/JavaScript</td>
+            </tr>
+            <tr>
+                <td>Quer economia de banda e armazenamento</td>
+                <td>Use <code>&lt;iframe&gt;</code> (o vídeo fica hospedado externamente)</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <h3>Formatos de aarquivos suportados</h3>
+
+    <table>
+        <thead>
+            <th>Formato</th>
+            <th>áudio</th>
+            <th>Vídeo</th>
+            <th>Navegadores</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MP3</td>
+                <td>✅</td>
+                <td>X</td>
+                <td>Todos modernos</td>
+            </tr>
+            <tr>
+                <td>WAV</td>
+                <td>✅</td>
+                <td>X</td>
+                <td>Todos modernos</td>
+            </tr>
+            <tr>
+                <td>OGG</td>
+                <td>✅</td>
+                <td>X</td>
+                <td>Firefox, Chrome, Opera</td>
+            </tr>
+            <tr>
+                <td>MP4 / H.264</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Todos Modernos</td>
+            </tr>            
+            <tr>
+                <td>WebM</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Chrome, Firefox, Opera</td>
+            </tr>
+            <tr>
+                <td>OGV</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>Firefox, Opera</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>Dica: </b>Sempre forneça <b>mais de um formato</b> para garantir compatibilidade com diferentes navegadores</p>
+
+
+    <h2>Boas práticas</h2>
+    <ol>
+        <li><b>Sempre use o atributo</b> controls para dar ao usuário botões de play/pause/volume.</li>
+        <li><b>Forneça múltiplas fontes</b> (MP4 + WebM para vídeo, MP3 + OGG para áudio).</li>
+        <li><b>Inclua um texto alternativo</b> dentro da tag para navegadores antigos.</li>
+        <li><b>Use</b> preload <b>com moderação</b> (evite carregar aquivos pesados desnecessariamente)</li>
+        <li><b>Respeito direitos autorais</b> - use apenas mídias com licença livre ou de sua autoria.</li>
+    </ol>
+
+    </main>
+</body>
+</html>

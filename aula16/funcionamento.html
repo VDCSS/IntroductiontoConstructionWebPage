@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos e Funcionamento de Mídia - HTML5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Multimídia Web</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Introdução</a></li>
+                <li><a href="funcionamento.html" class="active">Atributos e Funcionamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h1>Atributos das Tags de Mídia</h1>
+            <p class="lead">
+                Tanto a tag <code>&lt;audio&gt;</code> quanto a <code>&lt;video&gt;</code> compartilham a maioria dos atributos, 
+                já que ambas são tags de mídia. No entanto, existem alguns atributos que são exclusivos para cada tipo de mídia.
+            </p>
+            <p>
+                Abaixo, apresentamos uma referência completa de todos os atributos disponíveis, o que cada um faz, e exemplos de uso prático.
+            </p>
+        </section>
+
+        <section>
+            <h2>Atributos Comuns <span class="badge">Áudio e Vídeo</span></h2>
+            <p>Estes atributos podem ser utilizados tanto na tag <code>&lt;audio&gt;</code> quanto na tag <code>&lt;video&gt;</code>.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Valor</th>
+                            <th>O que faz?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>controls</code></td>
+                            <td><em>(booleano)</em></td>
+                            <td>Exibe os controles de reprodução nativos (play, pause, volume, progresso).</td>
+                        </tr>
+                        <tr>
+                            <td><code>autoplay</code></td>
+                            <td><em>(booleano)</em></td>
+                            <td>Inicia a reprodução automaticamente ao carregar a página.</td>
+                        </tr>
+                        <tr>
+                            <td><code>loop</code></td>
+                            <td><em>(booleano)</em></td>
+                            <td>Repete a reprodução da mídia em loop infinito.</td>
+                        </tr>
+                        <tr>
+                            <td><code>muted</code></td>
+                            <td><em>(booleano)</em></td>
+                            <td>Inicia a mídia com o áudio silenciado (sem som).</td>
+                        </tr>
+                        <tr>
+                            <td><code>preload</code></td>
+                            <td><code>none</code> / <code>metadata</code> / <code>auto</code></td>
+                            <td>Define se e como a mídia deve ser pré-carregada pelo navegador.</td>
+                        </tr>
+                        <tr>
+                            <td><code>src</code></td>
+                            <td><em>URL</em></td>
+                            <td>Especifica o caminho direto do arquivo de mídia.</td>
+                        </tr>
+                        <tr>
+                            <td><code>volume</code></td>
+                            <td><code>0.0</code> a <code>1.0</code></td>
+                            <td>Define o nível do volume da mídia (controlado via JavaScript).</td>
+                        </tr>
+                        <tr>
+                            <td><code>currentTime</code></td>
+                            <td><em>segundos</em></td>
+                            <td>Define ou retorna a posição de tempo atual da reprodução (via JS).</td>
+                        </tr>
+                        <tr>
+                            <td><code>duration</code></td>
+                            <td><em>(somente leitura)</em></td>
+                            <td>Retorna a duração total da mídia em segundos (via JS).</td>
+                        </tr>
+                        <tr>
+                            <td><code>paused</code></td>
+                            <td><em>(somente leitura)</em></td>
+                            <td>Retorna <code>true</code> se a mídia estiver pausada (via JS).</td>
+                        </tr>
+                        <tr>
+                            <td><code>ended</code></td>
+                            <td><em>(somente leitura)</em></td>
+                            <td>Retorna <code>true</code> se a reprodução da mídia foi concluída (via JS).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Atributos Exclusivos <span class="badge">Apenas Vídeo</span></h2>
+            <p>Estes atributos são aplicáveis exclusivamente à tag <code>&lt;video&gt;</code>.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Valor</th>
+                            <th>O que faz?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>width</code></td>
+                            <td><em>pixels</em></td>
+                            <td>Define a largura física do player de vídeo.</td>
+                        </tr>
+                        <tr>
+                            <td><code>height</code></td>
+                            <td><em>pixels</em></td>
+                            <td>Define a altura física do player de vídeo.</td>
+                        </tr>
+                        <tr>
+                            <td><code>poster</code></td>
+                            <td><em>URL</em></td>
+                            <td>Exibe uma imagem de capa antes de o vídeo iniciar a reprodução.</td>
+                        </tr>
+                        <tr>
+                            <td><code>playsinline</code></td>
+                            <td><em>(booleano)</em></td>
+                            <td>Faz o vídeo tocar inline dentro da página no iOS, em vez de abrir em tela cheia nativa.</td>
+                        </tr>
+                        <tr>
+                            <td><code>controlslist</code></td>
+                            <td><code>nodownload</code> / <code>nofullscreen</code> / <code>noremoteplayback</code></td>
+                            <td>Oculta opções ou controles específicos do painel padrão do navegador.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Explicação Detalhada dos Atributos</h2>
+            <p>Vamos analisar como funcionam na prática os atributos mais importantes.</p>
+            
+            <div class="details-grid">
+                
+                <!-- Controls -->
+                <div class="card">
+                    <h3>1. controls</h3>
+                    <p class="card-desc"><strong>Para que serve:</strong> Exibe a barra de controles com botões de play, pause, volume, linha do tempo e tela cheia (para vídeos).</p>
+                    <div class="code-header">Exemplo</div>
+                    <pre><code>&lt;audio controls&gt;
+    &lt;source src="musica.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+                    <p class="card-note"><strong>Sem ele:</strong> A mídia existirá na página, mas o usuário não terá uma interface visual direta para controlá-la.</p>
+                </div>
+
+                <!-- Autoplay -->
+                <div class="card">
+                    <h3>2. autoplay</h3>
+                    <p class="card-desc"><strong>Para que serve:</strong> Faz com que o arquivo de mídia comece a tocar imediatamente após o carregamento da página.</p>
+                    <div class="code-header">Exemplo</div>
+                    <pre><code>&lt;video autoplay&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+                    <div class="alert alert-warning">
+                        <span class="alert-icon">⚠️</span>
+                        <div class="alert-content">
+                            <strong>Atenção:</strong> A maioria dos navegadores modernos bloqueia reprodução automática com som para evitar incomodar o usuário. Combine-o com <code>muted</code> para funcionar.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loop -->
+                <div class="card">
+                    <h3>3. loop</h3>
+                    <p class="card-desc"><strong>Para que serve:</strong> Faz com que a reprodução reinicie automaticamente ao chegar ao fim, criando um ciclo contínuo.</p>
+                    <div class="code-header">Exemplo</div>
+                    <pre><code>&lt;audio loop&gt;
+    &lt;source src="musica.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+                    <p class="card-note"><strong>Quando usar:</strong> Excelente para efeitos sonoros repetitivos ou trilhas sonoras de fundo (background music).</p>
+                </div>
+
+                <!-- Muted -->
+                <div class="card">
+                    <h3>4. muted</h3>
+                    <p class="card-desc"><strong>Para que serve:</strong> Inicializa a mídia com o volume em zero (totalmente silenciada).</p>
+                    <div class="code-header">Exemplo</div>
+                    <pre><code>&lt;video muted autoplay&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+                    <p class="card-note"><strong>Quando usar:</strong> Vídeos de fundo decorativos ou para satisfazer os requisitos dos navegadores sobre autoplay.</p>
+                </div>
+
+                <!-- Preload -->
+                <div class="card full-width">
+                    <h3>5. preload</h3>
+                    <p class="card-desc"><strong>Para que serve:</strong> Indica ao navegador qual estratégia de carregamento deve ser utilizada antes de o usuário clicar em "play".</p>
+                    
+                    <div class="table-container mini-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Valor</th>
+                                    <th>Significado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>none</code></td>
+                                    <td>Não carrega nenhum dado preventivamente, economizando largura de banda.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>metadata</code></td>
+                                    <td>Carrega apenas as informações básicas (duração, dimensões do vídeo, etc.).</td>
+                                </tr>
+                                <tr>
+                                    <td><code>auto</code></td>
+                                    <td>Tenta carregar o arquivo de mídia completo em segundo plano imediatamente.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="code-header">Exemplo</div>
+                    <pre><code>&lt;video preload="metadata"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+                    <p class="card-note"><strong>Dica:</strong> Use <code>metadata</code> ou <code>none</code> para páginas contendo múltiplos players de mídia para melhorar o desempenho de carregamento.</p>
+                </div>
+
+                <!-- Poster -->
+                <div class="card">
+                    <h3>6. poster (somente vídeo)</h3>
+                    <p class="card-desc"><strong>Para que serve:</strong> Define uma imagem de capa personalizada que fica visível no player enquanto o vídeo não começou a tocar.</p>
+                    <div class="code-header">Exemplo</div>
+                    <pre><code>&lt;video poster="capa.jpg" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+                    <p class="card-note"><strong>Quando usar:</strong> Praticamente sempre. Agrega valor estético e fornece um contexto visual imediato do que o vídeo trata.</p>
+                </div>
+
+                <!-- Width & Height -->
+                <div class="card">
+                    <h3>7. width e height (somente vídeo)</h3>
+                    <p class="card-desc"><strong>Para que serve:</strong> Define a proporção física e dimensões em pixels da área de renderização do player.</p>
+                    <div class="code-header">Exemplo</div>
+                    <pre><code>&lt;video width="640" height="360" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+                    <p class="card-note"><strong>Dica de CSS:</strong> Para criar um player responsivo, defina <code>max-width: 100%</code> e <code>height: auto</code> em seu arquivo de estilos.</p>
+                </div>
+
+                <!-- Src vs Source -->
+                <div class="card full-width">
+                    <h3>8. src vs &lt;source&gt;</h3>
+                    <p class="card-desc">
+                        O atributo <code>src</code> é ideal quando você possui apenas um formato e deseja simplicidade. 
+                        A tag filha <code>&lt;source&gt;</code> permite oferecer múltiplos formatos, permitindo ao navegador escolher o primeiro compatível.
+                    </p>
+                    
+                    <div class="code-header">Exemplo simplificado com src:</div>
+                    <pre><code>&lt;audio src="musica.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+                    
+                    <div class="code-header">Exemplo recomendado com múltiplos &lt;source&gt;:</div>
+                    <pre><code>&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    &lt;source src="video.ogv" type="video/ogg"&gt;
+&lt;/video&gt;</code></pre>
+                    <p class="card-note"><strong>Recomendação:</strong> Utilize múltiplos <code>&lt;source&gt;</code> para garantir compatibilidade com todos os navegadores.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Tabela de Compatibilidade dos Atributos</h2>
+            <p>Resumo de quais atributos são suportados em cada tag nativa.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Tag &lt;audio&gt;</th>
+                            <th>Tag &lt;video&gt;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>controls</code></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>autoplay</code></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>loop</code></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>muted</code></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>preload</code></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>src</code></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>width</code></td>
+                            <td><span class="compat-cross">❌ Não</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>height</code></td>
+                            <td><span class="compat-cross">❌ Não</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>poster</code></td>
+                            <td><span class="compat-cross">❌ Não</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>playsinline</code></td>
+                            <td><span class="compat-cross">❌ Não</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>controlslist</code></td>
+                            <td><span class="compat-cross">❌ Não</span></td>
+                            <td><span class="compat-check">✅ Sim</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Exemplos Combinados completos</h2>
+            <p>Estes códigos mostram a combinação avançada de múltiplos atributos em uso simultâneo.</p>
+            
+            <h3>Vídeo Completo</h3>
+            <pre><code>&lt;video 
+    width="640" 
+    height="360" 
+    poster="capa.jpg" 
+    controls 
+    autoplay 
+    muted 
+    loop 
+    preload="metadata"
+    playsinline&gt;
+    
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    Seu navegador não suporta vídeos HTML5.
+&lt;/video&gt;</code></pre>
+
+            <h3>Áudio Completo</h3>
+            <pre><code>&lt;audio controls loop preload="none"&gt;
+    &lt;source src="musica.mp3" type="audio/mpeg"&gt;
+    &lt;source src="musica.ogg" type="audio/ogg"&gt;
+    Seu navegador não suporta áudio HTML5.
+&lt;/audio&gt;</code></pre>
+        </section>
+
+        <section class="accessibility-box">
+            <h2>♿ Dicas de Acessibilidade</h2>
+            <ul>
+                <li><strong>Descrições de mídia:</strong> Sempre utilize <code>aria-label</code> ou <code>title</code> para descrever brevemente a mídia para leitores de tela.</li>
+                <li><strong>Legendas:</strong> Sempre que possível, adicione legendas aos vídeos usando o elemento <code>&lt;track&gt;</code>.</li>
+                <li><strong>Navegação por Teclado:</strong> Garanta que os controles de reprodução padrão sejam acessíveis e operáveis via teclado.</li>
+            </ul>
+            
+            <h4>Exemplo de Legendas Integradas:</h4>
+            <pre><code>&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;track src="legendas.vtt" kind="subtitles" srclang="pt" label="Português"&gt;
+&lt;/video&gt;</code></pre>
+        </section>
+    </main>
+
+    <footer class="doc-footer">
+        <p>
+            Dominar os atributos das tags <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code> é essencial para criar páginas ricas, acessíveis e compatíveis com diferentes navegadores. Experimente combinar atributos, testar em navegadores diferentes e sempre priorizar a experiência do usuário!
+        </p>
+    </footer>
+
+</body>
+</html>
