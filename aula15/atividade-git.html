@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução à Construção de Páginas WEB</title>
+</head>
+<body>
+    <h1>Atividade Git e GitHub</h1>
+    <p>Esta é uma atividade para praticar os comandos do Git e GitHub.</p>
+    <br>
+    <h3>O que entendi sobre Git ?</h3>
+    <p>Git vai ser um sistema de versionamento de arquivos, onde ela irá nos permitir 
+        ter controle sobre as alterações que fazemos nos arquivos.
+    </p>
+    <br>
+    <h3>O que entendi sobre GitHub ?</h3>
+    <p>GitHub vai ser uma plataforma de hospedagem de arquivos, onde ela irá nos permitir 
+        ter controle sobre as alterações que fazemos nos arquivos. De forma que seja 
+        possivel ver o historico de alterações e reverter para uma versão anterior se necessário.
+        Dessa forma ele facilita o trabalho em equipe, pois permite que todos os membros 
+        da equipe tenham acesso ao historico de alterações e possam contribuir para o projeto.
+        Além de que, permite que a plataforma seja usada como Portifólio ou até mesmo pesquisar códigos
+        que eu queira desenvolver/inspirar ela permite.
+    </p>
+
+    <p>O conceito de branches é o que mais se aplica a grandes códigos, no nosso caso não serviria tanto, já
+        que não é necessário a alteração severa em diferentes arquivos. Porém em grandes softwares a conversa muda,
+        pois é necessario diversas pessoas trabalharem nos mesmos arquivos, de forma que um não atrapalhe o outro e permita que
+        a produção não seja afetada caso algo saia errado.
+        Então o conceito de branches é basicamente criar cópias do arquivo, onde cada um pode
+        trabalhar em sua versão de forma independente, e depois que todos terminarem, eles podem
+        juntar as suas versões em uma única versão, que será a versão final.
+    </p>
+
+    <h3>Dificuldades que tive: </h3>
+    <p>As dificuldades que tive foram na geração do ssh, pois eu não sabia como gerar o ssh e onde ele era salvo.
+        Tambem tive dificuldades em entender como usar o ssh para adicionar no GitHub.
+        Mas com a ajuda da documentação e da aula consegui resolver as dificuldades.
+
+    </p>
+
+    <h3>Comandos usados: </h3>
+    <p>ssh-keygen -t ed25519 -C "[EMAIL_ADDRESS]"
+    
+    eval "$(ssh-agent -s)"~
+    ssh-add ~/.ssh/id_ed25519
+    
+    ls -al ~/.ssh
+    # Lists the files in your .ssh directory, if they exist
+    
+    cat ~/.ssh/id_ed25519.pub
+    # Then select and copy the contents of the id_ed25519.pub file
+    # displayed in the terminal to your clipboard
+
+    git status
+    git add .
+    git commit -m "Mensagem"
+    git push origin main
+    </p>
+
+
+
+</body>
+</html>
